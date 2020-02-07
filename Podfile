@@ -15,6 +15,7 @@ end
 
 def service_pods
   pod 'Alamofire', '~> 4.8.2'
+  pod 'SDWebImage'
 end
 
 # Pods for project

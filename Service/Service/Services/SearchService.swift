@@ -51,12 +51,12 @@ public struct SearchResponse: Codable {
         let wrapperType: WrapperType
         let kind: String?
         let trackId: Int?
-        let artistName: String
+        public let artistName: String
         let collectionName: String
         public let trackName: String?
         let trackViewURL: String?
         let previewURL: String
-        let artworkUrl30, artworkUrl60, artworkUrl100: String?
+        public let artworkUrl30, artworkUrl60, artworkUrl100: String?
 
         enum CodingKeys: String, CodingKey {
             case wrapperType, kind, trackId, artworkUrl30, artworkUrl60, artworkUrl100, artistName, collectionName, trackName

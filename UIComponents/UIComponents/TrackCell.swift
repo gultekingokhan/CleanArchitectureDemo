@@ -7,12 +7,33 @@
 //
 
 import UIKit
+import Utilities
 
 open class TrackCell: UITableViewCell {
     
-    @IBOutlet public var nameLabel: UILabel! {
+    @IBOutlet public weak var containerView: UIView! {
         didSet {
-            nameLabel.textColor = .darkGray
+            containerView.layer.cornerRadius = 18
+            containerView.dropShadow(with: UIColor(hex: 0xEBEBEB))
+        }
+    }
+    
+    @IBOutlet public weak var trackNameLabel: UILabel! {
+        didSet {
+            trackNameLabel.textColor = .darkGray
+        }
+    }
+    
+    @IBOutlet public weak var artistNameLabel: UILabel! {
+        didSet {
+            artistNameLabel.textColor = .gray
+        }
+    }
+    
+    @IBOutlet public weak var albumCoverImageView: UIImageView! {
+        didSet {
+            albumCoverImageView.contentMode = .scaleAspectFit
+            albumCoverImageView.layer.cornerRadius = albumCoverImageView.frame.width/2
         }
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import UIComponents
+import SDWebImage
 
 final class SearchView: UIView {
     
@@ -48,10 +49,19 @@ extension SearchView: UITableViewDelegate, UITableViewDataSource {
             
             let result = results[indexPath.row]
            
-            cell.nameLabel.text = result.trackName ?? "-"
+            cell.trackNameLabel.text = result.trackName ?? "-"
+            cell.artistNameLabel.text = result.artistName ?? "-"
+
+            if let coverURL = result.coverURL {
+                cell.albumCoverImageView.sd_setImage(with: coverURL)
+            }
             
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
