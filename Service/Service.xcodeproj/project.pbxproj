@@ -11,6 +11,10 @@
 		57455B7823EC6E74008B7D44 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57455B7723EC6E74008B7D44 /* ServiceTests.swift */; };
 		57455B7A23EC6E74008B7D44 /* Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 57455B6C23EC6E74008B7D44 /* Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57455B9623EC70C7008B7D44 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57455B9523EC70C7008B7D44 /* APIClient.swift */; };
+		575F2C9E23ED606F00691034 /* search-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 575F2C9D23ED606F00691034 /* search-response.json */; };
+		575F2CA223ED647100691034 /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F2CA123ED647100691034 /* ResourceLoader.swift */; };
+		5798E80C23ED53A500AD1D49 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798E80B23ED53A500AD1D49 /* APIRouter.swift */; };
+		5798E81423ED556B00AD1D49 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798E81323ED556B00AD1D49 /* SearchService.swift */; };
 		B4F75BEDB15503F990550EDF /* Pods_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A2112875EEA87F0770064 /* Pods_Service.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,10 @@
 		57455B7723EC6E74008B7D44 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		57455B7923EC6E74008B7D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57455B9523EC70C7008B7D44 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		575F2C9D23ED606F00691034 /* search-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "search-response.json"; sourceTree = "<group>"; };
+		575F2CA123ED647100691034 /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
+		5798E80B23ED53A500AD1D49 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		5798E81323ED556B00AD1D49 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		654A2112875EEA87F0770064 /* Pods_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABD9323DD3FFF688C5BC8B2 /* Pods-Service.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Service.debug.xcconfig"; path = "Target Support Files/Pods-Service/Pods-Service.debug.xcconfig"; sourceTree = "<group>"; };
 		F1B8E94ABB68B9013E28E6F5 /* Pods-Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Service.release.xcconfig"; path = "Target Support Files/Pods-Service/Pods-Service.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +90,10 @@
 			children = (
 				57455B6C23EC6E74008B7D44 /* Service.h */,
 				57455B9523EC70C7008B7D44 /* APIClient.swift */,
+				5798E80B23ED53A500AD1D49 /* APIRouter.swift */,
+				575F2CA023ED644F00691034 /* Helpers */,
+				575F2C9F23ED607A00691034 /* Resources */,
+				5798E81223ED556100AD1D49 /* Services */,
 				57455B6D23EC6E74008B7D44 /* Info.plist */,
 			);
 			path = Service;
@@ -94,6 +106,30 @@
 				57455B7923EC6E74008B7D44 /* Info.plist */,
 			);
 			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+		575F2C9F23ED607A00691034 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				575F2C9D23ED606F00691034 /* search-response.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		575F2CA023ED644F00691034 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				575F2CA123ED647100691034 /* ResourceLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5798E81223ED556100AD1D49 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5798E81323ED556B00AD1D49 /* SearchService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		7622A5DE523F3B7C50347E14 /* Frameworks */ = {
@@ -208,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575F2C9E23ED606F00691034 /* search-response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5798E81423ED556B00AD1D49 /* SearchService.swift in Sources */,
 				57455B9623EC70C7008B7D44 /* APIClient.swift in Sources */,
+				575F2CA223ED647100691034 /* ResourceLoader.swift in Sources */,
+				5798E80C23ED53A500AD1D49 /* APIRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

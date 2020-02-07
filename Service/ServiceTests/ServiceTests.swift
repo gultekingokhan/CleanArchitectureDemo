@@ -31,7 +31,19 @@ class ServiceTests: XCTestCase {
         }
     }
 
-    func testTestRun() {
-        APIClient.testRun()
+    func testDecodeSearchResponse() {
+
+        guard let data = try? ResourceLoader.loadFile(file: .search) else {
+            fatalError("Response file could not be read.")
+        }
+        
+        guard let response = try? JSONDecoder().decode(SearchResponse.self, from: data) else {
+            XCTFail("Search response could not be decoded.")
+            return
+        }
+        
+        XCTAssertNotNil(response)
+        XCTAssertEqual(response.resultCount, 50)
+        XCTAssertEqual(response.results[0].artistName, "Behemoth")
     }
 }
