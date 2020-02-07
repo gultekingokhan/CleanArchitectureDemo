@@ -22,7 +22,26 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        service.search("Behemoth") { (response) in }
+        customView.setLoading(true)
+        
+        service.search("Behemoth") { [weak self] (result) in
+            
+            guard let self = self else { return }
+        
+            self.customView.setLoading(false)
+            
+            switch result {
+            case .success(let value):
+                
+                let searchResults = value.results.map(SearchPresentation.init)
+                self.customView.updateSearchResults(searchResults)
+                
+                break
+            case .failure(let error):
+                print("Error occured while fetching the search results: \(error.localizedDescription)")
+                break
+            }
+        }
     }
 }
 

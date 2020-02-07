@@ -11,6 +11,7 @@ import UIKit
 @objc protocol SearchViewProtocol: class {
     weak var delegate: SearchViewDelegate? { get set }
     func setLoading(_ isLoading: Bool)
+    func updateSearchResults(_ presentation: [SearchPresentation])
 }
 
 @objc protocol SearchViewDelegate: class { }

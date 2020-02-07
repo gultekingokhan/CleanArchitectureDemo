@@ -44,7 +44,7 @@ open class SearchService: SearchServiceProtocol {
 public struct SearchResponse: Codable {
     
     let resultCount: Int
-    let results: [Result]
+    public let results: [Result]
     
     public struct Result: Codable {
         
@@ -53,7 +53,7 @@ public struct SearchResponse: Codable {
         let trackId: Int?
         let artistName: String
         let collectionName: String
-        let trackName: String?
+        public let trackName: String?
         let trackViewURL: String?
         let previewURL: String
         let artworkUrl30, artworkUrl60, artworkUrl100: String?
