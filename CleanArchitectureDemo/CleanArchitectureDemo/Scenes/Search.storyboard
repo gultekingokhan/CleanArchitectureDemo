@@ -37,8 +37,8 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-FD-pWz">
-                                                            <rect key="frame" x="60" y="16" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="60" y="16" width="44.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -55,9 +55,7 @@
                                                         <constraint firstItem="FXf-FD-pWz" firstAttribute="leading" secondItem="c6o-NR-J6s" secondAttribute="trailing" constant="8" id="2ta-MI-RzR"/>
                                                         <constraint firstItem="FXf-FD-pWz" firstAttribute="top" secondItem="WHl-R4-wOy" secondAttribute="top" constant="16" id="8ay-Ws-mrT"/>
                                                         <constraint firstItem="sbs-l5-FZn" firstAttribute="leading" secondItem="c6o-NR-J6s" secondAttribute="trailing" constant="8" id="HzV-IJ-cBB"/>
-                                                        <constraint firstAttribute="height" constant="60" id="gvr-8q-HE3"/>
                                                         <constraint firstItem="c6o-NR-J6s" firstAttribute="centerY" secondItem="WHl-R4-wOy" secondAttribute="centerY" id="i5C-sq-tZc"/>
-                                                        <constraint firstAttribute="width" constant="60" id="laJ-c9-StV"/>
                                                         <constraint firstAttribute="bottom" secondItem="sbs-l5-FZn" secondAttribute="bottom" constant="16" id="lgG-QC-cwT"/>
                                                     </constraints>
                                                 </view>
