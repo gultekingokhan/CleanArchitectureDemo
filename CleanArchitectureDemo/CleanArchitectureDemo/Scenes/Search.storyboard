@@ -16,8 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="azd-e5-z3Y">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrackCell" rowHeight="100" id="QUD-go-1g1" customClass="TrackCell" customModule="UIComponents">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -60,6 +61,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="WHl-R4-wOy" firstAttribute="leading" secondItem="Z3l-zu-5aj" secondAttribute="leading" constant="12" id="L0z-2h-kTe"/>
                                                 <constraint firstItem="WHl-R4-wOy" firstAttribute="top" secondItem="Z3l-zu-5aj" secondAttribute="top" constant="12" id="QBZ-gd-OTc"/>
@@ -67,6 +69,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="WHl-R4-wOy" secondAttribute="trailing" constant="12" id="j0E-gw-bY7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="albumCoverImageView" destination="c6o-NR-J6s" id="tK0-eV-gfk"/>
                                             <outlet property="artistNameLabel" destination="sbs-l5-FZn" id="iBg-wx-Ch8"/>
@@ -76,16 +79,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpQ-Md-fqz" customClass="SearchBar" customModule="UIComponents">
+                                <rect key="frame" x="0.0" y="44" width="414" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="JCO-Tz-AxR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-1l-FRZ">
+                                <rect key="frame" x="382" y="81" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="azd-e5-z3Y" firstAttribute="top" secondItem="xpQ-Md-fqz" secondAttribute="bottom" id="1lS-Y2-4fZ"/>
+                            <constraint firstItem="fvN-1l-FRZ" firstAttribute="centerY" secondItem="xpQ-Md-fqz" secondAttribute="centerY" id="40S-G4-C8M"/>
+                            <constraint firstItem="xpQ-Md-fqz" firstAttribute="leading" secondItem="5jV-ee-rOH" secondAttribute="leading" id="LTR-R9-UtV"/>
+                            <constraint firstItem="5jV-ee-rOH" firstAttribute="trailing" secondItem="fvN-1l-FRZ" secondAttribute="trailing" constant="12" id="Th9-q8-rIe"/>
                             <constraint firstItem="5jV-ee-rOH" firstAttribute="bottom" secondItem="azd-e5-z3Y" secondAttribute="bottom" constant="-34" id="Vyt-xX-0Vi"/>
                             <constraint firstItem="5jV-ee-rOH" firstAttribute="trailing" secondItem="azd-e5-z3Y" secondAttribute="trailing" id="W7s-S5-7mu"/>
-                            <constraint firstItem="azd-e5-z3Y" firstAttribute="top" secondItem="5jV-ee-rOH" secondAttribute="top" id="bno-Om-w5R"/>
+                            <constraint firstItem="5jV-ee-rOH" firstAttribute="trailing" secondItem="xpQ-Md-fqz" secondAttribute="trailing" id="h0g-a4-uq3"/>
                             <constraint firstItem="azd-e5-z3Y" firstAttribute="leading" secondItem="5jV-ee-rOH" secondAttribute="leading" id="sBI-Ty-xQ5"/>
+                            <constraint firstItem="xpQ-Md-fqz" firstAttribute="top" secondItem="5jV-ee-rOH" secondAttribute="top" id="vQe-3x-lyq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5jV-ee-rOH"/>
                         <connections>
+                            <outlet property="activityIndicator" destination="fvN-1l-FRZ" id="NeT-7Q-BE1"/>
+                            <outlet property="searchTextField" destination="xpQ-Md-fqz" id="HWx-cd-gj9"/>
                             <outlet property="tableView" destination="azd-e5-z3Y" id="bmK-f3-f3X"/>
                         </connections>
                     </view>

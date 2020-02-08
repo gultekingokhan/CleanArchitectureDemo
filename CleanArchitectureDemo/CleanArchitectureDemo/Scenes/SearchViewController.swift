@@ -21,13 +21,19 @@ final class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        search("Pearl Jam")
+    }
+    
+    func search(_ text: String) {
         
         customView.setLoading(true)
         
-        service.search("Behemoth") { [weak self] (result) in
+            service.cancelRequest()
+
+        service.search(text) { [weak self] (result) in
             
             guard let self = self else { return }
-        
+                        
             self.customView.setLoading(false)
             
             switch result {
@@ -45,4 +51,8 @@ final class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: SearchViewDelegate { }
+extension SearchViewController: SearchViewDelegate {
+    func searchTextUpdated(_ text: String) {
+        search(text)
+    }
+}

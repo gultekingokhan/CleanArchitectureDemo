@@ -14,6 +14,7 @@
 		575F2CA623ED6EBD00691034 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F2CA523ED6EBD00691034 /* TrackCell.swift */; };
 		575F2CF923EDABF700691034 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575F2CF823EDABF700691034 /* Utilities.framework */; };
 		575F2CFA23EDABF700691034 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 575F2CF823EDABF700691034 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57C1AFD923EF498200B37799 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1AFD823EF498200B37799 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		57455BCD23EC7326008B7D44 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		575F2CA523ED6EBD00691034 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		575F2CF823EDABF700691034 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C1AFD823EF498200B37799 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				57455BA423EC72E2008B7D44 /* UIComponents.h */,
 				57455BCD23EC7326008B7D44 /* Style.swift */,
 				575F2CA523ED6EBD00691034 /* TrackCell.swift */,
+				57C1AFD823EF498200B37799 /* SearchBar.swift */,
 				57455BA523EC72E2008B7D44 /* Info.plist */,
 			);
 			path = UIComponents;
@@ -232,6 +235,7 @@
 			files = (
 				57455BCE23EC7326008B7D44 /* Style.swift in Sources */,
 				575F2CA623ED6EBD00691034 /* TrackCell.swift in Sources */,
+				57C1AFD923EF498200B37799 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,6 +39,10 @@ open class SearchService: SearchServiceProtocol {
             }
         }
     }
+    
+    public func cancelRequest() {
+        APIClient.cancelRequests()
+    }
 }
 
 public struct SearchResponse: Codable {
@@ -48,14 +52,14 @@ public struct SearchResponse: Codable {
     
     public struct Result: Codable {
         
-        let wrapperType: WrapperType
+        let wrapperType: String?
         let kind: String?
         let trackId: Int?
-        public let artistName: String
-        let collectionName: String
+        public let artistName: String?
+        let collectionName: String?
         public let trackName: String?
         let trackViewURL: String?
-        let previewURL: String
+        let previewURL: String?
         public let artworkUrl30, artworkUrl60, artworkUrl100: String?
 
         enum CodingKeys: String, CodingKey {
@@ -63,10 +67,5 @@ public struct SearchResponse: Codable {
             case trackViewURL = "trackViewUrl"
             case previewURL = "previewUrl"
         }
-    }
-    
-    enum WrapperType: String, Codable {
-        case audiobook = "audiobook"
-        case track = "track"
     }
 }

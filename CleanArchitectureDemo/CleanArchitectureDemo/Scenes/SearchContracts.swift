@@ -14,5 +14,7 @@ import UIKit
     func updateSearchResults(_ presentation: [SearchPresentation])
 }
 
-@objc protocol SearchViewDelegate: class { }
+@objc protocol SearchViewDelegate: class {
+    func searchTextUpdated(_ text: String)
+}
 
