@@ -37,15 +37,15 @@ final class APIClient: APIClientProtocol {
                     return
                 }
                 
-                if let data = response.data {
+                if let _ = response.data {
                     
                     let body =  configuration.body == nil ? "<No body>" : "\(configuration.body!)"
                     
-                    var logs = "\n👉 URL: \(url)\n👉 Body: \(body)\n👉 Status code: \(code)"
-                    // Uncomment if you want to print response too.
+                    let logs = "\n👉 URL: \(url)\n👉 Body: \(body)\n👉 Status code: \(code)"
+                    /* Uncomment if you want to print response too.
                      let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
                      logs = logs + "\n👉 Response: \n\(json ?? response)"
-                     
+                     */
                     print(logs)
                 }
                 
