@@ -7,3 +7,4 @@ This is an example app that shows the implementation of one of the approaches th
 Please note that iTunes search API has some limitations, if you get 403 status code, know that you have just exceeded the request limit. 
 
 ![screenshot](screenshot.png)
+
