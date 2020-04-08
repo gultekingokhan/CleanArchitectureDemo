@@ -84,9 +84,6 @@ pipeline {
                     return env.shouldBuild != "false"
                 }
             }
-            steps {
-                // Build steps to deploy application to beta
-            }
         }
 
         stage('Build application for prod') {
@@ -95,9 +92,6 @@ pipeline {
                     return env.shouldBuild != "false" && env.BRANCH_NAME == "master"
                 }
             }
-            steps {
-                // Build steps to build application for prod
-            }
         }
 
         stage('Send to Prod') {
@@ -105,9 +99,6 @@ pipeline {
                 expression {
                     return env.shouldBuild != "false" && env.BRANCH_NAME == "master"
                 }
-            }
-            steps {
-                // Steps to deploy application to prod
             }
         }
 
